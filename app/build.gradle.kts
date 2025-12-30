@@ -92,51 +92,77 @@ android {
 
 dependencies {
     // 核心依赖
-    implementation(libs.core.ktx)
-    implementation(libs.lifecycle.runtime)
-    implementation(libs.lifecycle.viewmodel)
-    implementation(libs.activity.compose)
+    implementation("androidx.core:core-ktx:1.12.0")
+    implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.7.0")
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("androidx.activity:activity-compose:1.8.1")
 
     // Compose
-    implementation(platform(libs.compose.bom))
-    implementation(libs.bundles.compose)
-    implementation(libs.compose.navigation)
-    implementation(libs.compose.hilt.navigation)
+    implementation(platform("androidx.compose:compose-bom:2023.10.01"))
+    implementation("androidx.compose.ui:ui")
+
+    implementation("androidx.compose.ui:ui-graphics")
+
+    implementation("androidx.compose.ui:ui-tooling-preview")
+
+    implementation("androidx.compose.material3:material3")
+
+    implementation("androidx.compose.material:material-icons-extended")
+    implementation("androidx.navigation:navigation-compose:2.7.5")
+    implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
 
     // DI
-    implementation(libs.hilt.android)
-    kapt(libs.hilt.compiler)
+    implementation("com.google.dagger:hilt-android:2.48")
+    kapt("com.google.dagger:hilt-compiler:2.48")
 
     // 数据库
-    implementation(libs.bundles.database)
-    kapt(libs.room.compiler)
+    implementation("androidx.room:room-runtime:2.6.0")
+
+    implementation("androidx.room:room-ktx:2.6.0")
+
+    implementation("net.zetetic:android-database-sqlcipher:4.5.4")
+    kapt("androidx.room:room-compiler:2.6.0")
 
     // 网络
-    implementation(libs.bundles.network)
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
+
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")
+
+    implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
     // AI
-    implementation(libs.bundles.ai)
+    implementation("org.tensorflow:tensorflow-lite:2.14.0")
+
+    implementation("org.tensorflow:tensorflow-lite-support:2.14.0")
+
+    implementation("org.tensorflow:tensorflow-lite-gpu:2.14.0")
 
     // 安全
-    implementation(libs.bundles.security)
+    implementation("androidx.security:security-crypto:1.1.0-alpha06")
+
+    implementation("com.google.crypto.tink:tink-android:1.10.0")
 
     // 媒体
-    implementation(libs.coil)
+    implementation("io.coil-kt:coil-compose:2.5.0")
 
     // Excel
-    implementation(libs.apache.poi)
-    implementation(libs.apache.poi.ooxml)
+    implementation("org.apache.poi:poi:5.2.3")
+    implementation("org.apache.poi:poi-ooxml:5.2.3")
 
     // 工具
-    implementation(libs.gson)
-    implementation(libs.timber)
-    implementation(libs.lottie)
-    implementation(libs.threetenabp)
-    implementation(libs.kotlinx.datetime)
+    implementation("com.google.code.gson:gson:2.10.1")
+    implementation("com.jakewharton.timber:timber:5.0.1")
+    implementation("com.airbnb.android:lottie-compose:6.1.0")
+    implementation("com.jakewharton.threetenabp:threetenabp:1.4.6")
+    implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.4.1")
 
     // QR Code
-    implementation(libs.zxing)
-    implementation(libs.zxing.android)
+    implementation("com.google.zxing:core:3.5.2")
+    implementation("com.journeyapps:zxing-android-embedded:4.3.0")
 
     // 模块依赖
     implementation(project(":core"))
@@ -146,13 +172,13 @@ dependencies {
     implementation(project(":feature:quickactions"))
 
     // 测试
-    testImplementation(libs.junit)
-    testImplementation(libs.mockk)
-    testImplementation(libs.coroutines.test)
-    androidTestImplementation(libs.junit.ext)
-    androidTestImplementation(libs.espresso)
-    androidTestImplementation(platform(libs.compose.bom))
-    androidTestImplementation(libs.compose.ui.test.junit4)
+    testImplementation("junit:junit:4.13.2")
+    testImplementation("io.mockk:mockk:1.13.8")
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    androidTestImplementation("androidx.test.ext:junit:1.1.5")
+    androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
+    androidTestImplementation(platform("androidx.compose:compose-bom:2023.10.01"))
+//    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
 
     // Java 8+ 支持
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")

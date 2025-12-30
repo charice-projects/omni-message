@@ -1,0 +1,80 @@
+{
+  "detected_at": "2025-12-30T15:41:35.600137",
+  "environment": {
+    "system": "Windows",
+    "arch": "AMD64",
+    "java": {
+      "installed": true,
+      "version": "java version \"17.0.17\" 2025-10-21 LTS",
+      "home": "D:\\Program Files\\Java\\jdk-17",
+      "is_jdk_17": true
+    },
+    "android_sdk": {
+      "installed": true,
+      "path": "D:\\Program Files\\Android\\sdk",
+      "platforms": [
+        "android-34",
+        "android-36"
+      ],
+      "build_tools": [
+        "33.0.1",
+        "34.0.0",
+        "35.0.0",
+        "36.1.0"
+      ]
+    },
+    "android_studio": {
+      "installed": true,
+      "path": "D:\\Program Files\\Android\\Android Studio",
+      "version": ""
+    },
+    "gradle": {
+      "installed": false,
+      "version": "",
+      "wrapper_exists": true
+    },
+    "memory": {
+      "total_mb": 8192,
+      "available_mb": 4096
+    },
+    "cpu_cores": 4
+  },
+  "project_config": {
+    "android": {
+      "compileSdk": 34,
+      "minSdk": 29,
+      "targetSdk": 34,
+      "jvmTarget": "17",
+      "kotlinCompilerExtensionVersion": "1.5.8"
+    },
+    "gradle": {
+      "version": "8.12",
+      "agpVersion": "8.3.0",
+      "kotlinVersion": "1.9.22",
+      "memory": "4096m"
+    },
+    "dependencies": {
+      "androidx": {
+        "core": "1.12.0",
+        "lifecycle": "2.8.0",
+        "activity": "1.8.2",
+        "navigation": "2.7.6"
+      },
+      "compose": {
+        "bom": "2024.02.01",
+        "compiler": "1.5.8"
+      },
+      "hilt": "2.50",
+      "room": "2.6.1",
+      "retrofit": "2.9.0",
+      "okhttp": "4.12.0",
+      "coroutines": "1.7.3"
+    },
+    "system": {
+      "os": "Windows",
+      "java_home": "D:\\Program Files\\Java\\jdk-17",
+      "android_sdk": "D:\\Program Files\\Android\\sdk",
+      "android_studio": "D:\\Program Files\\Android\\Android Studio"
+    }
+  }
+}

@@ -11,6 +11,28 @@
           <set>
             <option value="$PROJECT_DIR$" />
             <option value="$PROJECT_DIR$/app" />
+            <option value="$PROJECT_DIR$/core" />
+            <option value="$PROJECT_DIR$/extension" />
+            <option value="$PROJECT_DIR$/extension/channels" />
+            <option value="$PROJECT_DIR$/extension/integrations" />
+            <option value="$PROJECT_DIR$/extension/plugins" />
+            <option value="$PROJECT_DIR$/feature" />
+            <option value="$PROJECT_DIR$/feature/analytics" />
+            <option value="$PROJECT_DIR$/feature/command" />
+            <option value="$PROJECT_DIR$/feature/contact" />
+            <option value="$PROJECT_DIR$/feature/emotion" />
+            <option value="$PROJECT_DIR$/feature/excelimport" />
+            <option value="$PROJECT_DIR$/feature/messaging" />
+            <option value="$PROJECT_DIR$/feature/notification" />
+            <option value="$PROJECT_DIR$/feature/quickactions" />
+            <option value="$PROJECT_DIR$/feature/scene" />
+            <option value="$PROJECT_DIR$/feature/search" />
+            <option value="$PROJECT_DIR$/feature/settings" />
+            <option value="$PROJECT_DIR$/feature/team" />
+            <option value="$PROJECT_DIR$/feature/transfer" />
+            <option value="$PROJECT_DIR$/feature/voice" />
+            <option value="$PROJECT_DIR$/feature/workflow" />
+            <option value="$PROJECT_DIR$/shared" />
           </set>
         </option>
         <option name="resolveExternalAnnotations" value="true" />

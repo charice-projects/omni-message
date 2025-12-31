@@ -8,12 +8,12 @@ plugins {
 
 android {
     namespace = "com.omnimsg"
-    compileSdk = 34
+    compileSdk = 35  
 
     defaultConfig {
         applicationId = "com.omnimsg.pro"
         minSdk = 24
-        targetSdk = 34
+        targetSdk = 35  // 同步降级
         versionCode = 10000
         versionName = "1.0.0"
 
@@ -79,7 +79,7 @@ android {
     }
 
     composeOptions {
-        kotlinCompilerExtensionVersion = "1.5.4"
+        kotlinCompilerExtensionVersion = "1.5.11"  // 更新到与Kotlin 1.9.24兼容的版本
     }
 
     packaging {
@@ -100,13 +100,9 @@ dependencies {
     // Compose
     implementation(platform("androidx.compose:compose-bom:2023.10.01"))
     implementation("androidx.compose.ui:ui")
-
     implementation("androidx.compose.ui:ui-graphics")
-
     implementation("androidx.compose.ui:ui-tooling-preview")
-
     implementation("androidx.compose.material3:material3")
-
     implementation("androidx.compose.material:material-icons-extended")
     implementation("androidx.navigation:navigation-compose:2.7.5")
     implementation("androidx.hilt:hilt-navigation-compose:1.1.0")
@@ -116,34 +112,25 @@ dependencies {
     kapt("com.google.dagger:hilt-compiler:2.48")
 
     // 数据库
-    implementation("androidx.room:room-runtime:2.6.0")
-
-    implementation("androidx.room:room-ktx:2.6.0")
-
+    implementation("androidx.room:room-runtime:2.6.1")
+    implementation("androidx.room:room-ktx:2.6.1")
     implementation("net.zetetic:android-database-sqlcipher:4.5.4")
-    kapt("androidx.room:room-compiler:2.6.0")
+    kapt("androidx.room:room-compiler:2.6.1")
 
-    // 网络
-    implementation("com.squareup.retrofit2:retrofit:2.9.0")
-
-    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
-
-    implementation("com.squareup.retrofit2:converter-scalars:2.9.0")
-
-    implementation("com.squareup.okhttp3:okhttp:4.12.0")
-
+    // 网络 - 修复Retrofit版本
+    implementation("com.squareup.retrofit2:retrofit:2.11.0")  // 改回2.9.0
+    implementation("com.squareup.retrofit2:converter-gson:2.11.0")
+    implementation("com.squareup.retrofit2:converter-scalars:2.11.0")
+    implementation("com.squareup.okhttp3:okhttp:4.12.0")  // 统一为4.12.0
     implementation("com.squareup.okhttp3:logging-interceptor:4.12.0")
 
-    // AI
-    implementation("org.tensorflow:tensorflow-lite:2.14.0")
-
-    implementation("org.tensorflow:tensorflow-lite-support:2.14.0")
-
-    implementation("org.tensorflow:tensorflow-lite-gpu:2.14.0")
+    // AI - 统一TensorFlow版本
+    implementation("org.tensorflow:tensorflow-lite:2.17.0")
+    implementation("org.tensorflow:tensorflow-lite-support:0.5.0")
+    implementation("org.tensorflow:tensorflow-lite-gpu:2.17.0") // 如果需要GPU加速
 
     // 安全
     implementation("androidx.security:security-crypto:1.1.0-alpha06")
-
     implementation("com.google.crypto.tink:tink-android:1.10.0")
 
     // 媒体
@@ -178,7 +165,6 @@ dependencies {
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
     androidTestImplementation("androidx.test.espresso:espresso-core:3.5.1")
     androidTestImplementation(platform("androidx.compose:compose-bom:2023.10.01"))
-//    androidTestImplementation("androidx.compose.ui:ui-test-junit4")
 
     // Java 8+ 支持
     coreLibraryDesugaring("com.android.tools:desugar_jdk_libs:2.0.4")
